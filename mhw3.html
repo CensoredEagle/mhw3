@@ -1,0 +1,181 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="mhw3.css" rel="stylesheet" type="text/css"/>
+        
+    </head>
+
+    <body>
+        <script type="text/javascript" src="mhw3.js" defer></script>
+        <article>
+            <div id="promo" class="head">
+                <p>Spendi di più, risparmia di più! Fino al 20% con il codice G2ASPRING</p>
+            </div>
+
+            <div id="presentazione" class="head">
+                <img src="logo.jpeg">
+                <input id="ricerca" type="search" placeholder="Che stai cercando?">
+                <button id="cerca">Cerca</button>
+                <input type="button" id="Profilo">
+                <a id="Accesso" href="#" onclick="auth()">Accedi/Registrati</a>
+                <input type="button" id="Carrello">
+
+                <nav>
+                    <ul>
+                    <li id="categoria"><a href="#">Categorie</a></li>
+                    <li><a href="#">I più venduti</a></li>
+                    <li><a href="#">Preordini</a></li>
+                    <li><a href="#">Chiavi random</a></li>
+                    <li><a href="#">Software</a></li>
+                    <li id="plus"><a href="#">Il miglior prezzo con g2a plus</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            
+            <div id="Foto">
+                <img src="g2a.jpg" onclick= cambio()>
+            </div>
+
+          
+            <div id="data"></div>
+            <script>
+            async function auth() {
+                const clientId = 'Ov23li2Qac0rbbvD9Aak';
+                const redirectUri = 'http://localhost:3000/oauth/callback'; 
+                window.location.href = `https://providerOAuth2.com/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=code`;
+            }
+            
+            async function fetchData(code) {
+                try {
+                    const response = await fetch(`http://localhost:3000/oauth/callback?code=${code}`);
+                    const data = await response.json();
+            
+                    document.getElementById('data').innerText = JSON.stringify(data);
+                } catch (error) {
+                    console.error('Errore durante il recupero dei dati:', error.message);
+                }
+            }
+            </script>
+            
+            <div id="Gratis">
+            <button onclick="Frees()">Clicca Per visualizzare l'elenco dei giochi gratuiti su Epic games!(console log)</button>
+            </div>
+
+            <div id="Corpo">
+                <section id="sezione">
+                  <p id="giochi">
+                    <strong>Giochi più venduti</strong><br/>
+                  </p>
+                  <button class="esplora">Esplora i giochi</button>
+                  <p id="descrizione">
+                    Gli articoli più popolari del nostro marketplace - scopri cosa ha conquistato il cuore dei nostri utenti!
+                  </p>
+                  <img id="gioco1" src="f123.jpg" data-game-id="1">
+                  <div id="F123" data-game-id="1">
+                    <p><span><strong>F1 23 (PC)</strong></span></p>
+                    <p><br/>43.98€</p>
+                    <button class="compra" data-game-id="1">Compra</button>
+                  </div>
+              
+                  <img id="gioco2" src="readyornot.jpg" data-game-id="2">
+                  <div id="Ready_or_not" data-game-id="2">
+                    <p><span><strong> Ready or Not (PC)</strong></span></p>
+                    <p><br/>28.17€</p>
+                    <button class="compra" data-game-id="2">Compra</button>
+                  </div>
+              
+                  <img id="gioco3" src="footman2024.jpg" data-game-id="3">
+                  <div id="Football" data-game-id="3">
+                    <p><span><strong>Football Manager 2024 (PC)</strong></span></p>
+                    <p><br/>27.63€</p>
+                    <button class="compra" data-game-id="3">Compra</button>
+                  </div>
+              
+                  <img id="gioco4" src="ww2k24.jpg" data-game-id="4">
+                  <div id="WW2k24" data-game-id="4">
+                    <p><span><strong>WWE 2K24 | 40 Years of Wrestlemania (PC)</strong></span></p>
+                    <p><br/>101.21€</p>
+                    <button class="compra" data-game-id="4">Compra</button>
+                  </div>
+                </section>
+              </div>
+
+              
+        </article>
+        
+        <button onclick="showDiv()"><p>Mostra il tuo codice sconto personale</p>
+        <div id="Sconto" class="nascosto"><p>Ecco il tuo codice sconto personale:  G2ASCONTOPASQUA</p></div>
+        </button>
+        <button onclick="hideDiv()">Nascondi il tuo codice sconto personale</button>
+
+        <footer id="g2a-footer">
+    <div class="container">
+        <div class="g2a-footer-info">
+            <ul class="footer-links">
+                <li class="footer-link">
+                    <a href="#">Informativa sulla privacy</a><br/>
+                </li>
+
+                <li class="footer-link">
+                    <a href="#">Termini e condizioni</a><br/>
+                </li>
+
+                <li class="footer-link">
+                    <a href="#">Programma di affiliazione</a><br/>
+                </li>
+
+                <li class="footer-link">
+                    <a href="#">Lavora con noi</a><br/>
+                </li>
+
+                <li class="footer-link">
+                    <a href="#">Contattaci</a><br/>
+                </li>
+
+            </ul>
+
+            <div class="copyright-info">
+                <span>
+                    G2A.COM Limited 31/F, Tower Two, Times Square, 1 Matheson Street<br/>
+                    Causeway Bay, Hong Kong<br/>
+                    Partita Iva: 63264201
+                </span>
+
+            </div>
+
+        </div>
+        <div class="g2a-footer-social-links">
+            <div class="social-links">
+
+                <a href="#" class="social-link social-link-facebook">
+                    <span class="icon-facebook"></span>
+                    <span class="link-label">Facebook<br/></span>
+                </a>
+
+                <a href="#" class="social-link social-link-twitter">
+                    <span class="icon-twitter"></span>
+                    <span class="link-label">Twitter<br/></span>
+                </a>
+
+                <a href="#" class="social-link social-link-instagram">
+                    <span class="icon-instagram"></span>
+                    <span class="link-label">Instagram<br/></span>
+                </a>
+
+                <a href="#" class="social-link social-link-youtube">
+                    <span class="icon-youtube"></span>
+                    <span class="link-label">YouTube<br/></span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+        </body>
+</html>

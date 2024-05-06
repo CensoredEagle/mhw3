@@ -1,0 +1,334 @@
+body {
+    background-color: rgb(241, 238, 233);
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.head{
+    position: fixed;
+    margin-left: -10px;
+    width: 100%;
+}
+
+#promo{
+    position: fixed;
+    top: 0;
+    left: -90;
+    width: 110%;
+    margin-top: -10px;
+    height: 4%;
+    background-color: rgb(4, 165, 4);
+    z-index: 50;
+}
+
+#promo p{
+    color: white;
+    margin-top: 18px;
+    text-align: center;
+    line-height: top;
+    font-family: "Oswald", sans-serif;
+    font-size: small;
+    font-weight: bold;
+    font-style: inherit;
+}
+
+@media only screen and (max-width: 500px) {
+    p#promo {
+      font-size: x-small;
+      line-height: normal;
+    }
+  }
+
+#presentazione{
+    height: 15%;
+    background-color: black;
+    z-index: 49;
+}
+
+#presentazione img{
+    height: 135px;
+    width: auto;
+    padding-left: 20%;
+    z-index: 49; 
+}
+
+@media only screen and (max-width: 500px) {
+    #presentazione img {
+        padding-left: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+    
+#ricerca{
+    position: relative;
+    border-color: transparent;
+    border-radius: 5px;
+    top: -65px;
+    width: 630px;
+    height: 45px;
+    z-index: 3;
+}
+
+#cerca{
+    top: -65px;
+    border-radius: 5px;
+    background-color: rgb(8, 185, 230);
+    border-color: transparent;
+    width: 50px;
+    height: 45px;
+    z-index: 4;
+    position: relative;
+}
+
+#Profilo{
+    border-color: transparent;
+    position: relative;
+    border-radius: 100%;
+    background-size: 100%;
+    width: 45px;
+    height: 45px;
+    background-image: url('utente.jpg');
+    background-repeat: no-repeat;
+    top: -45px;
+    margin-left: 1%;
+}
+
+#Accesso{
+    color: white;
+    position: relative;
+    right: -5px;
+    top: -60px;
+}
+
+#Carrello{
+    border-color: transparent;
+    position: relative;
+    border-radius: 100%;
+    background-size: 100%;
+    width: 45px;
+    height: 45px;
+    background-image: url('carrello.jpg');
+    background-repeat: no-repeat;
+    top: -45px;
+    margin-left: 1%;
+}
+
+nav {
+    padding: 10px;
+    top: -40px;
+}
+  
+nav ul {
+    margin-top: -52px;
+    margin-left: 22%;
+    padding: 0;
+    display: flex;
+}
+  
+nav li {
+    width: 120px;
+    margin-right: 6px;
+    background-color: rgb(43, 43, 43);
+    padding: 10px;
+    border-radius: 3px 3px 0px 0px;
+    list-style: none;
+}
+  
+nav a {
+    top: -50px;
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+
+#categoria{
+    width: 15%;
+}
+
+#plus{
+    width: 200px;
+    background-color: rgb(101, 41, 179);
+}
+
+#Foto{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+    margin-left: -10px;
+}
+
+#Foto img{
+    width: 1051px;
+    height: 400px;
+}
+
+#Gratis{
+    text-align: center;
+}
+
+
+#corpo{
+    margin-left: 22%;
+    width: 1051px;
+    margin-top: 5%;
+    position: relative;
+    z-index: 1;
+}
+
+#giochi{
+    font-size: 25px;
+}
+
+.esplora{
+    color: rgb(17, 13, 216);
+    background-color: rgb(245, 207, 207);
+    width: 10%;
+    height: 1.5%;
+    position: relative;
+    margin-left: 930px;
+    border: none;
+    border-radius: 3%;
+}
+
+.bordo {
+    border: 5px solid hotpink;
+  }
+
+
+#descrizione{
+    color: rgb(73, 73, 73);
+    position: relative;
+    margin-top: -15px;
+}
+
+#F123{
+    background-color: white;
+    text-align: left;
+    width: 29%;
+    height: 190px;
+    z-index: 29;
+    top: -190;
+    position: relative;
+    margin-left: 14.4%;
+}
+
+#gioco1{
+    margin-right:100%;
+    position: relative;
+    width: 150px;
+    height: 190px;
+    z-index: 30;
+    bottom: -16;
+}
+
+
+#Ready_or_not {
+    position: relative;
+    background-color: white;
+    text-align: left;
+    width: 29%;
+    height: 188px;
+    z-index: 29;
+    top: -585;
+    margin-left: 70.5%;
+}
+
+#gioco2{
+    position: relative;
+    width: 150px;
+    height: 190px;
+    z-index: 30;
+    bottom: 380;
+    margin-left: 56%;
+}
+
+#Football{
+    background-color: white;
+    text-align: left;
+    width: 29%;
+    height: 190px;
+    z-index: 29;
+    top: -650;
+    position: relative;
+    margin-left: 14.5%;
+}
+
+#gioco3{
+    margin-right:100%;
+    position: relative;
+    width: 150px;
+    height: 190px;
+    z-index: 30;
+    bottom: 444;
+}
+
+#WW2K24{
+    position: relative;
+    background-color: white;
+    text-align: left;
+    width: 29%;
+    height: 188px;
+    z-index: 29;
+    top: -1047;
+    margin-left: 70.5%;
+}
+
+#gioco4{
+    position: relative;
+    width: 150px;
+    height: 190px;
+    z-index: 30;
+    top: -842;  
+    margin-left: 56%;
+}
+
+.nascosto {
+    display: none;
+  }
+
+#g2a-footer {
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    padding: 50px 0;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    z-index: 51;
+}
+
+#g2a-footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#g2a-footer .g2a-footer-info,
+#g2a-footer .g2a-footer-social-links {
+    width: 50%;
+    padding: 0 10px;
+}
+
+.footer-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.footer-link {
+    color: #000000;
+    margin: 0 10px 10px 0;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.footer-link a {
+    color: #850f0f;
+    text-decoration: none;
+}
+
